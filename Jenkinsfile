@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the project...'
-                    sh 'g++ -o hello_exec main/hello_pipeline.cpp'
+                    sh 'g++ -o hello_exec hello_pipeline.cpp'
                 }
             }
         }
