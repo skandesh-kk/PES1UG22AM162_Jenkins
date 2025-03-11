@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the project...'
-                    sh 'g++ -o hello_exec main/hello.cpp'
+                    sh 'g++ -o hello_exec main/hello_pipeline.cpp'
                 }
             }
         }
@@ -15,6 +15,7 @@ pipeline {
             steps {
                 script {
                     echo 'Running the test...'
+                    sh 'chmod +x hello_exec'   // Ensures execution permission
                     sh './hello_exec'
                 }
             }
